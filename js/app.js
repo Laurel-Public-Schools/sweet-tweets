@@ -1,3 +1,5 @@
+//email script
+
 // User input's DOM elements
 const avatar = document.getElementById('avatar');
 const fileName = document.getElementById('file-name');
@@ -389,6 +391,26 @@ function takeScreenshot() {
   });
 }
 
+//Send Email
+
+Email.send({
+  Host : "smtp.gmail.com",
+  Username : "test_account@laurel.k12.mt.us",
+  Password : "T3stM3!!",
+  To : 'elliana_kerns@laurel.k12.mt.us',
+  From : "no_reply@laurel.k12.mt.us",
+  Subject : "This is the subject",
+  Body : "And this is the body"
+  Attachments : [
+  {
+      name : "smtpjs.png",
+      path : canvas.toDataURL()
+  }]
+}).then(
+message => alert(message)
+);
+
+
 // Set Timestamp when page is loaded
 function setTimestamp() {
   renderTime();
@@ -410,7 +432,7 @@ client.addEventListener('input', renderClient);
 retweets.addEventListener('input', renderRetweets);
 quotes.addEventListener('input', renderQuotes);
 likes.addEventListener('input', renderLikes);
-download.addEventListener('click', takeScreenshot);
+download.addEventListener('click', takeScreenshot, Email.send);
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener('change', toggleTheme);
