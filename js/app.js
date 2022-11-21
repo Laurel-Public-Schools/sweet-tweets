@@ -1,3 +1,5 @@
+//email script
+
 // User input's DOM elements
 const avatar = document.getElementById('avatar');
 const fileName = document.getElementById('file-name');
@@ -389,6 +391,9 @@ function takeScreenshot() {
   });
 }
 
+
+
+
 // Set Timestamp when page is loaded
 function setTimestamp() {
   renderTime();
@@ -410,7 +415,7 @@ client.addEventListener('input', renderClient);
 retweets.addEventListener('input', renderRetweets);
 quotes.addEventListener('input', renderQuotes);
 likes.addEventListener('input', renderLikes);
-download.addEventListener('click', takeScreenshot);
+download.addEventListener('click', takeScreenshot, Email.send);
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener('change', toggleTheme);
