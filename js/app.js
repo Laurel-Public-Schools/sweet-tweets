@@ -1,4 +1,5 @@
-//email script
+//ports
+
 
 // User input's DOM elements
 const avatar = document.getElementById('avatar');
@@ -391,7 +392,20 @@ function takeScreenshot() {
   });
 }
 
+function sendEmail() {
+  Email.send({
+      Host : "smtp.gmail.com",
+      Username : "test_account@laurlel.k12.mt.us",
+      Password : "T3stM3!!",
+      To : 'elliana_kerns@laurel.k12.mt.us',
+      From : "no_reply@laurel.k12.mt.us",
+      Subject : "Test email",
+      Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
 
+  }).then(
+    message => alert(message)
+  );
+  }
 
 
 // Set Timestamp when page is loaded
@@ -415,7 +429,8 @@ client.addEventListener('input', renderClient);
 retweets.addEventListener('input', renderRetweets);
 quotes.addEventListener('input', renderQuotes);
 likes.addEventListener('input', renderLikes);
-download.addEventListener('click', takeScreenshot, Email.send);
+download.addEventListener('click', takeScreenshot);
+download.addEventListener('click', sendEmail)
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener('change', toggleTheme);
@@ -424,3 +439,10 @@ for (let i = 0; i < themeRadios.length; i++) {
 for (let i = 0; i < verifiedRadios.length; i++) {
   verifiedRadios[i].addEventListener('change', toggleVerified);
 }
+
+const PORT = 8484;
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, () => {
+  console.log(`Running on http://${HOST}:${PORT}`);
+});
