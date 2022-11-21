@@ -429,8 +429,8 @@ client.addEventListener('input', renderClient);
 retweets.addEventListener('input', renderRetweets);
 quotes.addEventListener('input', renderQuotes);
 likes.addEventListener('input', renderLikes);
-download.addEventListener('click', takeScreenshot);
-download.addEventListener('click', sendEmail)
+download.addEventListener('click', takeScreenshot, sendEmail);
+
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener('change', toggleTheme);
