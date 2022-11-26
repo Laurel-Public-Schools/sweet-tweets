@@ -392,24 +392,7 @@ function takeScreenshot() {
   });
 }
 
-// function sendEmail() {
-//   Email.send({
-//       Host : "smtp.gmail.com",
-//       Username : "test_account@laurlel.k12.mt.us",
-//       Password : "T3stM3!!",
-//       To : 'elliana_kerns@laurel.k12.mt.us',
-//       From : "no_reply@laurel.k12.mt.us",
-//       Subject : "Test email",
-//       Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
-// 	    Attachments : [
-// 	{
-// 		name : fileName,
-// 		path : uri
-// 	}]
-//   }).then(
-//     message => alert(message)
-//   );
-//   }
+
 
 
 // Set Timestamp when page is loaded
