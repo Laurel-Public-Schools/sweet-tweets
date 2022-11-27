@@ -1,7 +1,7 @@
 //Email
 
 
-const nodemailer = require('nodemailer');
+var nodemailer = require('nodemailer');
 
 
 
