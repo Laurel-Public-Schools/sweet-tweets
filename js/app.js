@@ -471,7 +471,7 @@ client.addEventListener('input', renderClient);
 retweets.addEventListener('input', renderRetweets);
 quotes.addEventListener('input', renderQuotes);
 likes.addEventListener('input', renderLikes);
-download.addEventListener('click', takeScreenshot, main);
+download.addEventListener('click', takeScreenshot);
 
 
 for (let i = 0; i < themeRadios.length; i++) {
@@ -482,9 +482,3 @@ for (let i = 0; i < verifiedRadios.length; i++) {
   verifiedRadios[i].addEventListener('change', toggleVerified);
 }
 
-const PORT = 8484;
-const HOST = '0.0.0.0';
-
-app.listen(PORT, HOST, () => {
-  console.log(`Running on http://${HOST}:${PORT}`);
-});
