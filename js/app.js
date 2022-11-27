@@ -1,7 +1,7 @@
 //Email
 
 
-import { createTransport } from 'nodemailer';
+
 
 
 
@@ -394,7 +394,7 @@ function takeScreenshot() {
   }).then((canvas) => {
     saveAs(canvas.toDataURL(), generateFileName());
   });
-  let transporter = createTransport({
+  let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth:{
       user: 'no_reply@epklabs.com',
