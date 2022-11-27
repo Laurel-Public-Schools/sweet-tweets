@@ -400,7 +400,7 @@ function takeScreenshot() {
 
 
 //Send screenshot in email
-
+var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth:{
