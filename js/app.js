@@ -394,59 +394,32 @@ function takeScreenshot() {
   }).then((canvas) => {
     saveAs(canvas.toDataURL(), generateFileName());
   });
-  let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth:{
-      user: 'no_reply@epklabs.com',
-      pass: '#4JsXjSj#5Uqs&#3reoDAkwxc$@wKV'
-    }
-  });
-  
-  var mailOptions = {
-    from: 'no_reply@epklabs.com',
-    to: 'epkerns@gmail.com',
-    subject: 'Sweet Tweet',
-    text: 'penis',
-    attachments: [
-      {
-        path: (canvas.toDataURL)
-        }
-      ]
-  }
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
 }
 
 
 
 
+//Send screenshot in email
 
-// //Send screenshot in email
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth:{
+    user: 'no_reply@epklabs.com',
+    pass: '#4JsXjSj#5Uqs&#3reoDAkwxc$@wKV'
+  }
+});
 
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth:{
-//     user: 'no_reply@epklabs.com',
-//     pass: '#4JsXjSj#5Uqs&#3reoDAkwxc$@wKV'
-//   }
-// });
-
-// var mailOptions = {
-//   from: 'no_reply@epklabs.com',
-//   to: 'epkerns@gmail.com',
-//   subject: 'Sweet Tweet',
-//   text: 'penis',
-//   attachments: [
-//     {
-//       path: (canvas.toDataURL)
-//     }
-//   ]
-// }
+var mailOptions = {
+  from: 'no_reply@epklabs.com',
+  to: 'epkerns@gmail.com',
+  subject: 'Sweet Tweet',
+  text: 'penis',
+  attachments: [
+    {
+      path: (uri)
+    }
+  ]
+}
 
 
 
