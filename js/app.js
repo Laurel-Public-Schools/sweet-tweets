@@ -390,7 +390,7 @@ function takeScreenshot() {
   
 }
 
-var attachment = saveAs();
+
 
 function sendEmail(){
   Email.send({
