@@ -387,7 +387,27 @@ function takeScreenshot() {
   }).then((canvas) => {
     saveAs(canvas.toDataURL(), generateFileName());
   });
+  function sendEmail(){
+    Email.send({
+      Host : "smtp.mailtrap.io",
+      Username : "28e08a4ef13c49",
+      Password : "cc724f9ab393e9",
+      To : 'epkerns@gmail.com',
+      From : "elliana_kerns@laurel.k12.mt.us",
+      Subject : "Test email",
+      Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
+      Attachments : [
+        {
+          name : (canvas),
+          path : (uri)
+        }
+      ]
+  }).then(
+    message => alert(message)
+  );
+  }
 }
+
 
 // Set Timestamp when page is loaded
 function setTimestamp() {
@@ -410,4 +430,4 @@ date.addEventListener('input', renderDate);
 //retweets.addEventListener('input', renderRetweets);
 //quotes.addEventListener('input', renderQuotes);
 //likes.addEventListener('input', renderLikes);
-download.addEventListener('click', takeScreenshot)
+download.addEventListener('click', takeScreenshot, sendEmail) 
