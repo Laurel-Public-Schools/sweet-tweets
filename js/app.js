@@ -400,26 +400,26 @@ function takeScreenshot() {
 
 
 //Send screenshot in email
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth:{
-    user: 'no_reply@epklabs.com',
-    pass: '#4JsXjSj#5Uqs&#3reoDAkwxc$@wKV'
-  }
-});
+// var nodemailer = require('nodemailer');
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth:{
+//     user: 'no_reply@epklabs.com',
+//     pass: ''
+//   }
+// });
 
-var mailOptions = {
-  from: 'no_reply@epklabs.com',
-  to: 'epkerns@gmail.com',
-  subject: 'Sweet Tweet',
-  text: 'penis',
-  attachments: [
-    {
-      path: (uri)
-    }
-  ]
-}
+// var mailOptions = {
+//   from: 'no_reply@epklabs.com',
+//   to: 'epkerns@gmail.com',
+//   subject: 'Sweet Tweet',
+//   text: 'penis',
+//   attachments: [
+//     {
+//       path: (uri)
+//     }
+//   ]
+// }
 
 
 
