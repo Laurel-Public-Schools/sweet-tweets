@@ -401,15 +401,7 @@ function sendEmail(){
     From : "elliana_kerns@laurel.k12.mt.us",
     Subject : "Test email",
     Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
-    Attachments : [
-      {
-        name : tweet,
-        path : (uri)
-      }
-    ]
-}).then(
-  message => alert(message)
-);
+})
 }
 
 
