@@ -404,12 +404,12 @@ reset.addEventListener('click', resetProfilePicture);
 fullname.addEventListener('input', renderName);
 username.addEventListener('input', renderUsername);
 message.addEventListener('input', renderMessage);
-time.addEventListener('input', renderTime);
-date.addEventListener('input', renderDate);
-client.addEventListener('input', renderClient);
-retweets.addEventListener('input', renderRetweets);
-quotes.addEventListener('input', renderQuotes);
-likes.addEventListener('input', renderLikes);
+//time.addEventListener('input', renderTime);
+//date.addEventListener('input', renderDate);
+//client.addEventListener('input', renderClient);
+//retweets.addEventListener('input', renderRetweets);
+//quotes.addEventListener('input', renderQuotes);
+//likes.addEventListener('input', renderLikes);
 download.addEventListener('click', takeScreenshot);
 
 for (let i = 0; i < themeRadios.length; i++) {
