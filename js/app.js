@@ -390,6 +390,8 @@ function takeScreenshot() {
   
 }
 
+var attachment = saveAs();
+
 function sendEmail(){
   Email.send({
     Host : "smtp.mailtrap.io",
@@ -402,7 +404,7 @@ function sendEmail(){
     Attachments : [
       {
         name : (canvas),
-        path : (uri)
+        path : attachment
       }
     ]
 }).then(
