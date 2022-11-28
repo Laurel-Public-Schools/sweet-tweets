@@ -376,7 +376,7 @@ function saveAs(uri, filename) {
 // Take screenshot of the tweet
 function takeScreenshot() {
   window.scrollTo(0, 0);
-  html2canvas(document.querySelector('.tweet'), {
+  html2canvas(document.querySelector('#download'), {
     allowTaint: true,
     backgroundColor: themeColor,
     useCORS: true,
