@@ -15,7 +15,7 @@
 Modified version of https://shashiirk.github.io/fake-tweet-generator/ by Shashiirk. Used for custom tweets at laurel school district in Montana
 ## Live Demo
 
-See it live [here](https://biohackerellie.github.io/sweet-tweets).
+See it live [here](https://tweet.epklabs.com).
 
 ## Licence
 
