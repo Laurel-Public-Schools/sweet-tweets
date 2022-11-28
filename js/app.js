@@ -403,7 +403,7 @@ function sendEmail(){
     Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
     Attachments : [
       {
-        name : (canvas),
+        name : tweet,
         path : attachment
       }
     ]
