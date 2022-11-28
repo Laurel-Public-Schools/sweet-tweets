@@ -411,11 +411,3 @@ message.addEventListener('input', renderMessage);
 //quotes.addEventListener('input', renderQuotes);
 //likes.addEventListener('input', renderLikes);
 download.addEventListener('click', takeScreenshot);
-
-for (let i = 0; i < themeRadios.length; i++) {
-  themeRadios[i].addEventListener('change', toggleTheme);
-}
-
-for (let i = 0; i < verifiedRadios.length; i++) {
-  verifiedRadios[i].addEventListener('change', toggleVerified);
-}
