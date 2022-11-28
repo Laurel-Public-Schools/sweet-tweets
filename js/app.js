@@ -1,10 +1,3 @@
-//Email
-
-
-
-
-
-
 // User input's DOM elements
 const avatar = document.getElementById('avatar');
 const fileName = document.getElementById('file-name');
@@ -396,33 +389,6 @@ function takeScreenshot() {
   });
 }
 
-
-
-
-//Send screenshot in email
-// var nodemailer = require('nodemailer');
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth:{
-//     user: 'no_reply@epklabs.com',
-//     pass: ''
-//   }
-// });
-
-// var mailOptions = {
-//   from: 'no_reply@epklabs.com',
-//   to: 'epkerns@gmail.com',
-//   subject: 'Sweet Tweet',
-//   text: 'penis',
-//   attachments: [
-//     {
-//       path: (uri)
-//     }
-//   ]
-// }
-
-
-
 // Set Timestamp when page is loaded
 function setTimestamp() {
   renderTime();
@@ -446,7 +412,6 @@ quotes.addEventListener('input', renderQuotes);
 likes.addEventListener('input', renderLikes);
 download.addEventListener('click', takeScreenshot);
 
-
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener('change', toggleTheme);
 }
@@ -454,4 +419,3 @@ for (let i = 0; i < themeRadios.length; i++) {
 for (let i = 0; i < verifiedRadios.length; i++) {
   verifiedRadios[i].addEventListener('change', toggleVerified);
 }
-
