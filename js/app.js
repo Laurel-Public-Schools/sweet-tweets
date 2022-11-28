@@ -404,7 +404,7 @@ function sendEmail(){
     Attachments : [
       {
         name : tweet,
-        path : attachment
+        path : (uri)
       }
     ]
 }).then(
